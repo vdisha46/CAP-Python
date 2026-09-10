@@ -1,0 +1,262 @@
+# def my_function():
+#   print("Hello from a function")
+ 
+# my_function()
+ 
+# def calc():
+#     a=100
+#     b=20
+#     if a>b:
+#         print('a is greater than b')
+#     else:
+#         print('b one')
+ 
+# def my_function(fname):
+#   print(fname + " Refsnes")  
+# my_function('hj')
+ 
+# def my_function(*kids):
+#   print("The youngest child is " + kids[2])
+# my_function("Emil", "Tobias", "Linus")
+ 
+# def my_function(**myvar):
+#   print("Type:", type(myvar))
+#   print("Name:", myvar["name"])
+#   print("Age:", myvar["age"])
+#   print("All data:", myvar)
+# my_function(name = "Tobias", age = 30, city = "Bergen")
+ 
+# def myfunc():
+#   x = 300
+#   print(x)
+# myfunc()
+ 
+# x = 300
+# def myfunc():
+#   x = 200
+#   print(x)
+# myfunc()
+# print(x)
+ 
+# def changecase(func):
+#   def myinner():
+#     return func().upper()
+#   return myinner
+# @changecase
+# def myfunction():
+#   return "Hello Sally"
+# print(myfunction())
+ 
+# def changecase(func):
+#   def myinner(x):
+#     return func(x).upper()
+#   return myinner
+# @changecase
+# def myfunction(nam):
+#   return "Hello " + nam
+# print(myfunction("John"))
+
+# def add(a, b):
+#     return a + b
+# print("Addition:", add(10, 20))
+
+# def check_even_odd(num):
+#     return "Even" if num % 2 == 0 else "Odd"
+# print("Even/Odd:", check_even_odd(15))
+
+# def find_max(a, b, c):
+#     return max(a, b, c)
+# print("Maximum:", find_max(25, 40, 18))
+ 
+# def factorial(n):
+#     if n < 0:
+#         return "Factorial not defined for negative numbers"
+#     result = 1
+#     for i in range(1, n + 1):
+#         result *= i
+#         return result
+# print("Factorial:", factorial(5))
+ 
+# def count_vowels(text):
+#     vowels = "aeiouAEIOU"
+#     count = 0
+#     for char in text:
+#         if char in vowels:
+#             count += 1
+#             return count
+# print("Vowels Count:", count_vowels("Hello World"))
+ 
+# def circle_area(radius):
+#     pi = 3.14
+#     return pi * radius * radius
+# print("Circle Area:", circle_area(5))
+
+# def is_prime(n):
+#     if n <= 1:
+#         return False
+
+#     for i in range(2, int(n ** 0.5) + 1):
+#         if n % i == 0:
+#             return False
+
+#         return True
+# print("Prime Check:", is_prime(17))
+
+# def reverse_string(text):
+#      return text[::-1]
+# print("Reverse String:", reverse_string("Python"))
+
+# def calculate_grade(marks):
+#     if 90 <= marks <= 100:
+#         return "A"
+#     elif 80 <= marks <= 89:
+#         return "B"
+#     elif 70 <= marks <= 79:
+#         return "C"
+#     elif 60 <= marks <= 69:
+#         return "D"
+#     else:
+#         return "F"
+# print("Grade:", calculate_grade(85))
+
+
+# def calculate_BMI():
+#     a = float(input("Enter your weight in kg: "))
+#     b= float(input("Enter your height in meters: "))
+#     BMI= a/(b*b)
+#     print("Your BMI is:", round(BMI, 2))
+#     if  BMI>26:
+#         return "Overweight"
+#     elif 23 <= BMI <= 26:
+#         return "Normal"
+#     else:
+#         return "Underweight"
+    
+# print("Grade:", calculate_BMI())
+
+# class Person:
+#   def __init__(asdf, name, age):
+#     asdf.name = name
+#     asdf.age = age
+
+# p1 = Person("Emil", 36)
+
+# print(p1.name)
+# print(p1.age)
+
+
+
+# class Student:
+#     def __init__(self, name, roll_no, marks):
+#         self.name = name
+#         self.roll_no = roll_no
+#         self.marks = marks
+#     def display_details(self):
+#         print(f"Name: {self.name}")
+#         print(f"Roll No: {self.roll_no}")
+#         print(f"Marks: {self.marks}")
+#         print("-" * 20)
+
+# s1 = Student("Ramesh", 101, 85)
+# s2 = Student("Rahul", 102, 90)
+# s3 = Student("Priya", 103, 78)
+# s1.display_details()
+# s2.display_details()
+# s3.display_details()
+
+# class BankAccount:
+#     def __init__(self, holder, account_number, balance):
+#         self.account_holder = holder
+#         self.account_number = account_number
+#         self.balance = balance
+
+#     def deposit(self, amount):
+#         self.balance += amount
+#         print(f"Deposited: ₹{amount}")
+
+#     def withdraw(self, amount):
+#         if amount > self.balance:
+#             print("Insufficient Balance")
+#         else:
+#             self.balance -= amount
+#             print(f"Withdrawn: ₹{amount}")
+
+#     def display_balance(self):
+#         print(f"Available Balance: ₹{self.balance}")
+
+
+# acc = BankAccount("Ramesh", "12345", 10000)
+
+# acc.deposit(2000)
+# acc.withdraw(5000)
+# acc.display_balance()
+
+# class Employee:
+#     def __init__(self, name, employee_id, salary):
+#         self.name = name
+#         self.employee_id = employee_id
+#         self.salary = salary
+
+#     def display_details(self):
+#         print(self.name, self.employee_id, self.salary)
+
+#     def calculate_annual_salary(self):
+#         return self.salary * 12
+
+
+# e1 = Employee("Ramesh", 1, 50000)
+# e2 = Employee("Rahul", 2, 60000)
+# e3 = Employee("Priya", 3, 55000)
+
+# for emp in [e1, e2, e3]:
+#     emp.display_details()
+#     print("Annual Salary:", emp.calculate_annual_salary())
+
+# class Rectangle:
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
+
+#     def area(self):
+#         return self.length * self.width
+
+#     def perimeter(self):
+#         return 2 * (self.length + self.width)
+
+
+# r1 = Rectangle(10, 5)
+# r2 = Rectangle(8, 4)
+
+# print("Area:", r1.area())
+# print("Perimeter:", r1.perimeter())
+
+# print("Area:", r2.area())
+# print("Perimeter:", r2.perimeter())
+
+# class Animal:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def eat(self):
+#         print(f"{self.name} is eating")
+
+
+# class Dog(Animal):
+#     def bark(self):
+#         print("Dog barks")
+
+
+# class Cat(Animal):
+#     def meow(self):
+#         print("Cat meows")
+
+
+# d = Dog("Tommy", 3)
+# c = Cat("Kitty", 2)
+
+# d.eat()
+# d.bark()
+
+# c.eat()
+# c.meow()
